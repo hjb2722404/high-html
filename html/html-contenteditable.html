@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contenteditable实验</title>
+    <script type="text/javascript">
+        function showTip() {
+            alert('hello,按钮被点击了');
+        }
+    </script>
+</head>
+<body>
+
+<h3 contenteditable="true">这是可编辑的h3</h3>
+<h3 contenteditable="false">这是不可编辑的h3</h3>
+
+<p contenteditable="true">这里是可编辑的p</p>
+<p contenteditable="false">这里是不可编辑的p</p>
+
+<a href="" contenteditable="true">我是可编辑的链接</a><br>
+<a href="" contenteditable="false">我是不可编辑的链接</a><br>
+
+<p contenteditable="true">可编辑的图片，实际上不可编辑</p>
+<img src="./001.jpg" contenteditable="true" alt="可编辑的图片" title="可编辑的图片" width="300">
+<br>
+<p contenteditable="false">不可编辑的图片：</p>
+<img src="./001.jpg" contenteditable="false" alt="不可编辑的图片" title="不可编辑的图片" width="300">
+<br>
+
+<input type="text" contenteditable="true" placeholder="这是一个可编辑的input"><br>
+<input type="text" contenteditable="false" style="width: 400px;" placeholder="这是一个不可编辑的input,但实际上它是可编辑的">
+
+
+<br>
+<textarea name="info" id="info" contenteditable="true" cols="30" rows="10">可编辑</textarea>
+
+<textarea name="info" id="info" contenteditable="false" cols="30" rows="10">不可编辑，实际上可编辑</textarea>
+
+<blockquote contenteditable="true">这里是可编辑的引用</blockquote>
+<blockquote contenteditable="false">这里是不可编辑的引用</blockquote>
+可编辑的选择控件，实际上不可编辑
+<select contenteditable="true" style="width: 200px;">
+    <option value="1" contenteditable="true">1</option>
+    <option value="3">2</option>
+    <option value="3">3</option>
+</select>
+<br>
+可编辑的进入条，实际上不可编辑
+<progress value="50" min="0" max="100" contenteditable="true"></progress>
+<br>
+
+可编辑的按钮
+<button contenteditable="true" onclick="showTip()">可编辑按钮</button><br>
+不可编辑的按钮
+<button contenteditable="false" onclick="showTip()">不可编辑按钮</button>
+
+
+<br>
+可编辑的表格
+<table contenteditable="true" border="1">
+    <tr>
+        <td contenteditable="false">不可编辑的单元格</td>
+        <td>继承父元素，可编辑</td>
+    </tr>
+    <tr contenteditable="false">
+        <td>继承父元素，不可编辑</td>
+        <td contenteditable="true">可编辑的单元格</td>
+    </tr>
+</table>
+
+
+
+<div id="div1" contenteditable="true">
+    <h3> 我是div1中的h3</h3>
+    <p>我是div1中的p,<a href="">我是p中的链接</a></p>
+</div>
+
+</body>
+</html>

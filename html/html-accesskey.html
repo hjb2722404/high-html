@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML-accesskey</title>
+</head>
+<body>
+<FORM action="http://www.baidu.com" method="post">
+    <h3>LABAL</h3>
+    <P>
+        <LABEL for="fuser" accesskey="u">
+            User Name
+        </LABEL>
+        <INPUT type="text" name="user" id="fuser">
+    </P>
+    <P>
+        <LABEL for="fmotion" accesskey="M">
+            Motion
+        </LABEL>
+        <INPUT type="text" name="user" id="fmotion">
+    </P>
+    <h3>A</h3>
+    <P>
+        <A href="http://www.baidu.com" target="_blank" accesskey="o">去百度</A>
+    </P>
+    <h3>textarea</h3>
+    <p>
+        <textarea name="textarea" id="textarea" accesskey="i" cols="30" rows="10"></textarea>
+    </p>
+    <h3>Input</h3>
+    <p>
+        <input type="text" id="input01" placeholder="input01" accesskey="q">
+    </p>
+    <!--input02实际上法无法通过accesskey获得焦点，因为其快捷键与浏览器自身快捷键冲突-->
+    <p>
+        <input type="text" id="input02" placeholder="input02" accesskey="f">
+    </p>
+    <h3>area</h3>
+    <img src="001.jpg" border="0" usemap="#planetmap" alt="Planets" />
+
+    <map name="planetmap" id="planetmap">
+        <area shape="circle" coords="180,139,14" href ="1.html" alt="Venus" accesskey="1" />
+        <area shape="circle" coords="129,161,10" href ="2.html" alt="Mercury" accesskey="2" />
+        <area shape="rect" coords="0,0,110,260" href ="3.html" alt="Sun" accesskey="3"/>
+    </map>
+    <h3>button</h3>
+    <p>
+        <button type="reset" accesskey="r">重置</button>
+    </p>
+</FORM>
+</body>
+</html>
